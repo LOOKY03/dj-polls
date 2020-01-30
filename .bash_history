@@ -43,3 +43,12 @@ python manage.py migrate
 python manage.py shell
 python manage.py makemigrations
 python manage.py migrate
+git add .
+git commit -m 'second COMMIT'
+git remote add origin https://github.com/LOOKY03/dj-polls.git
+git push -u origin master
+source <(egrep -v 'declare -x TMUX|declare -.?r ' /home/ubuntu/.tmux/sessions-old/zx4eaxh27wg/vars.txt) && cd ${PWD}
+python3 manage.py shell
+python manage.py createsuperuser
+python manage.py runserver
+git status
